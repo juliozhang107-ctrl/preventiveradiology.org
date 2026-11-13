@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Preventive Radiology</title>
+<meta name="description" content="Preventive radiology uses medical imaging to find risk early, including in scans read as normal. Research and writing by Julio Min Fei Zhang, MD, MPH.">
+<meta name="author" content="Julio Min Fei Zhang, MD, MPH">
+<link rel="canonical" href="https://preventiveradiology.org/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Preventive Radiology">
+<meta property="og:description" content="Using medical imaging to find risk early, including in scans read as normal.">
+<meta property="og:url" content="https://preventiveradiology.org/">
+<meta name="theme-color" content="#F6F8FA" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0B1826" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230D2743'/%3E%3Crect x='6' y='8' width='5' height='16' fill='%23F6F8FA'/%3E%3Crect x='11' y='8' width='5' height='16' fill='%23F6F8FA' opacity='.75'/%3E%3Crect x='16' y='8' width='5' height='16' fill='%23F6F8FA' opacity='.5'/%3E%3Crect x='21' y='8' width='5' height='16' fill='%23F6F8FA' opacity='.25'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Preventive Radiology",
+  "url": "https://preventiveradiology.org/",
+  "description": "Preventive radiology uses medical imaging to find risk early, including in scans read as normal.",
+  "author": {
+    "@type": "Person",
+    "name": "Julio Min Fei Zhang",
+    "honorificSuffix": "MD, MPH",
+    "url": "https://juliozhang.com",
+    "sameAs": [
+      "https://orcid.org/0000-0003-4893-1261",
+      "https://scholar.google.com/citations?user=PTNIOUkAAAAJ"
+    ]
+  }
+}
+</script>
+<style>
+  :root {
+    --paper: #F6F8FA;
+    --ink: #0D2743;
+    --muted: #5B6F84;
+    --line: #CCD7E2;
+    --focus: #2F7FD1;
+    --font: "Archivo", "Helvetica Neue", Helvetica, Arial, system-ui, sans-serif;
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --paper: #0B1826;
+      --ink: #E6EEF6;
+      --muted: #8FA3B8;
+      --line: #24384D;
+      --focus: #6FB2F2;
+      color-scheme: dark;
+    }
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+  html { height: 100%; -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--font);
+    font-size: 1.0625rem;
+    line-height: 1.55;
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+
+  /* Step wedge: coarse steps at the ends, the middle band resolved finer */
+  .wedge { display: flex; height: calc(10px + env(safe-area-inset-top, 0px)); }
+  .wedge span { flex: 4; background: color-mix(in oklab, var(--ink) var(--t), var(--paper)); }
+  .wedge .fine { flex: 1; }
+
+  .page {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    max-width: 60rem;
+    padding: clamp(3rem, 10vh, 7rem) clamp(1.25rem, 7vw, 6rem);
+  }
+
+  h1 {
+    margin: 0;
+    font-size: clamp(2.6rem, 9vw, 6rem);
+    font-weight: 600;
+    font-stretch: 125%;
+    line-height: 0.96;
+    letter-spacing: -0.025em;
+  }
+  h1 span { display: block; }
+
+  .lede {
+    margin: clamp(1.5rem, 4vh, 2.25rem) 0 0;
+    max-width: 33em;
+    font-size: clamp(1.0625rem, 1.6vw, 1.25rem);
+    color: var(--muted);
+  }
+
+  .signup { margin-top: clamp(3rem, 9vh, 5.5rem); }
+  .signup label {
+    display: block;
+    font-size: 1rem;
+    font-weight: 500;
+  }
+  .field {
+    display: flex;
+    align-items: stretch;
+    gap: 1rem;
+    margin-top: 0.75rem;
+  }
+  .field input {
+    flex: 1;
+    min-width: 0;
+    padding: 0.35em 0;
+    border: 0;
+    border-bottom: 2px solid var(--ink);
+    border-radius: 0;
+    background: transparent;
+    color: var(--ink);
+    font: inherit;
+    font-size: clamp(1.6rem, 4.6vw, 3rem);
+    font-weight: 300;
+    letter-spacing: -0.015em;
+    line-height: 1.2;
+  }
+  .field input::placeholder { color: color-mix(in oklab, var(--ink) 38%, var(--paper)); opacity: 1; }
+  .field input:focus-visible { outline: none; border-bottom-color: var(--focus); }
+  .field button {
+    padding: 0 1.75rem;
+    border: 0;
+    border-radius: 3px;
+    background: var(--ink);
+    color: var(--paper);
+    font: inherit;
+    font-size: 1.0625rem;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  .field button:hover { background: color-mix(in oklab, var(--ink) 86%, var(--paper)); }
+  .field button:focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; }
+  .field button[disabled] { opacity: 0.6; cursor: default; }
+
+  .note { margin: 0.9rem 0 0; min-height: 1.55em; font-size: 0.9375rem; color: var(--muted); }
+  .note[data-state="done"] { color: var(--ink); font-weight: 500; }
+
+  footer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem 1.75rem;
+    width: 100%;
+    max-width: 60rem;
+    padding: 1.5rem clamp(1.25rem, 7vw, 6rem) 2rem;
+    font-size: 0.9375rem;
+    color: var(--muted);
+  }
+  footer a { color: inherit; text-decoration-color: var(--line); text-underline-offset: 0.2em; }
+  footer a:hover { color: var(--ink); text-decoration-color: currentColor; }
+  footer a:focus-visible { outline: 2px solid var(--focus); outline-offset: 3px; }
+  footer .who { color: var(--ink); margin-right: auto; }
+
+  @media (max-width: 34rem) {
+    .field { flex-direction: column; gap: 1.25rem; }
+    .field button { padding: 0.9rem 1.75rem; }
+  }
+</style>
+</head>
+<body>
+
+<div class="wedge" aria-hidden="true">
+  <span style="--t:100%"></span><span style="--t:90%"></span><span style="--t:80%"></span><span style="--t:70%"></span>
+  <span class="fine" style="--t:67%"></span><span class="fine" style="--t:64%"></span><span class="fine" style="--t:61%"></span><span class="fine" style="--t:58%"></span><span class="fine" style="--t:55%"></span><span class="fine" style="--t:52%"></span><span class="fine" style="--t:49%"></span><span class="fine" style="--t:46%"></span><span class="fine" style="--t:43%"></span><span class="fine" style="--t:40%"></span><span class="fine" style="--t:37%"></span><span class="fine" style="--t:34%"></span>
+  <span style="--t:24%"></span><span style="--t:14%"></span><span style="--t:4%"></span>
+</div>
+
+<main class="page">
+  <h1><span>Preventive</span><span>Radiology</span></h1>
+
+  <p class="lede">Radiology is built to find disease. Preventive radiology uses the same images to find risk early, including in scans read as normal.</p>
+
+  <form class="signup" id="signup" method="post" novalidate>
+    <label for="email">Get new research and writing by email</label>
+    <div class="field">
+      <input id="email" name="email" type="email" inputmode="email" autocomplete="email" placeholder="Email address" required aria-describedby="note">
+      <button type="submit">Subscribe</button>
+    </div>
+    <p class="note" id="note" role="status" aria-live="polite">Occasional emails. Unsubscribe anytime.</p>
+  </form>
+</main>
+
+<footer>
+  <span class="who">Julio Min Fei Zhang, MD, MPH</span>
+  <a href="https://juliozhang.com" rel="me">juliozhang.com</a>
+  <a href="https://orcid.org/0000-0003-4893-1261" rel="me">ORCID</a>
+  <a href="https://scholar.google.com/citations?user=PTNIOUkAAAAJ" rel="me">Google Scholar</a>
+</footer>
+
+<script>
+  // The address your newsletter service gives you for its sign-up form.
+  // The form sends one field named "email" to it.
+  const SUBSCRIBE_URL = "";
+
+  const form = document.getElementById("signup");
+  const input = document.getElementById("email");
+  const note = document.getElementById("note");
+  const button = form.querySelector("button");
+
+  function say(text, state) {
+    note.textContent = text;
+    note.dataset.state = state || "";
+  }
+
+  form.addEventListener("submit", async (event) => {
+    event.preventDefault();
+    if (!input.checkValidity()) {
+      say("Enter a valid email address.");
+      input.focus();
+      return;
+    }
+    if (!SUBSCRIBE_URL) {
+      say("Sign-up isn’t connected to a mailing list yet.");
+      return;
+    }
+    button.disabled = true;
+    try {
+      const response = await fetch(SUBSCRIBE_URL, {
+        method: "POST",
+        body: new FormData(form),
+        headers: { Accept: "application/json" }
+      });
+      if (response.ok) {
+        form.reset();
+        say("Subscribed. Thank you.", "done");
+      } else {
+        say("That didn’t go through. Check the address and try again.");
+      }
+    } catch (error) {
+      // Services that don’t accept background requests get a normal form post.
+      form.action = SUBSCRIBE_URL;
+      form.submit();
+      return;
+    } finally {
+      button.disabled = false;
+    }
+  });
+</script>
+</body>
+</html>
