@@ -203,9 +203,9 @@
 </footer>
 
 <script>
-  // The address your newsletter service gives you for its sign-up form.
+  // Buttondown sign-up endpoint for the julio_min newsletter.
   // The form sends one field named "email" to it.
-  const SUBSCRIBE_URL = "";
+  const SUBSCRIBE_URL = "https://buttondown.com/api/emails/embed-subscribe/julio_min";
 
   const form = document.getElementById("signup");
   const input = document.getElementById("email");
@@ -237,7 +237,7 @@
       });
       if (response.ok) {
         form.reset();
-        say("Subscribed. Thank you.", "done");
+        say("Thank you. Check your inbox to confirm.", "done");
       } else {
         say("That didn’t go through. Check the address and try again.");
       }
