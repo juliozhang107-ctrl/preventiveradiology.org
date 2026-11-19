@@ -96,7 +96,7 @@
     position: relative;
     isolation: isolate;
     display: grid;
-    grid-template-rows: auto 1fr auto;
+    grid-template-rows: 1fr;
     min-height: 100vh;
     min-height: 100svh;
     margin: 0;
@@ -147,35 +147,6 @@
     mix-blend-mode: overlay;
     pointer-events: none;
   }
-
-  /* Top bar */
-  .top {
-    display: grid;
-    grid-template-columns: 1fr auto;
-    grid-template-areas: "links action";
-    align-items: start;
-    gap: 1rem;
-    width: 100%;
-    max-width: 96rem;
-    margin: 0 auto;
-    padding: 1.25rem var(--edge) 0;
-  }
-  .action {
-    grid-area: action;
-    justify-self: end;
-    display: inline-block;
-    padding: 0.6rem 1rem;
-    border-radius: 0;
-    background: var(--button);
-    color: var(--button-text);
-    font-family: var(--font-strong);
-    font-size: 0.875rem;
-    font-weight: 600;
-    line-height: 1.2;
-    text-decoration: none;
-    white-space: nowrap;
-  }
-  .action:hover { background: #FFFFFF; }
 
   /* Centre */
   main {
@@ -293,10 +264,6 @@
   </svg>
 </div>
 
-<header class="top">
-  <a class="action" href="#email">Get the newsletter</a>
-</header>
-
 <main>
   <h1>Preventive Radiology</h1>
 
@@ -319,12 +286,6 @@
   const input = document.getElementById("email");
   const note = document.getElementById("note");
   const button = form.querySelector("button");
-
-  // The top-right link puts the cursor in the email field.
-  document.querySelector(".action").addEventListener("click", (event) => {
-    event.preventDefault();
-    input.focus();
-  });
 
   function say(text) {
     note.textContent = text;
