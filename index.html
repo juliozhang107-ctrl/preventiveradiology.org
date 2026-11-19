@@ -160,25 +160,12 @@
     margin: 0 auto;
     padding: 1.25rem var(--edge) 0;
   }
-  .links {
-    grid-area: links;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.3rem;
-    font-size: 0.875rem;
-  }
-  .links a {
-    color: var(--text-soft);
-    text-decoration: none;
-  }
-  .links a:hover { color: var(--text); text-decoration: underline; text-underline-offset: 0.25em; }
   .action {
     grid-area: action;
     justify-self: end;
     display: inline-block;
     padding: 0.6rem 1rem;
-    border-radius: 6px;
+    border-radius: 0;
     background: var(--button);
     color: var(--button-text);
     font-family: var(--font-strong);
@@ -227,7 +214,7 @@
     margin-top: 0.9rem;
     padding: 0.5rem;
     border: 1px solid var(--field-line);
-    border-radius: 10px;
+    border-radius: 0;
     background: var(--field);
     -webkit-backdrop-filter: blur(14px);
     backdrop-filter: blur(14px);
@@ -238,7 +225,7 @@
     min-width: 0;
     padding: 0.7rem 0.9rem;
     border: 0;
-    border-radius: 6px;
+    border-radius: 0;
     background: transparent;
     color: var(--text);
     font: inherit;
@@ -251,7 +238,7 @@
   .field button {
     padding: 0 1.5rem;
     border: 0;
-    border-radius: 6px;
+    border-radius: 0;
     background: var(--button);
     color: var(--button-text);
     font-family: var(--font-strong);
@@ -267,14 +254,6 @@
     margin: 0.85rem 0 0;
     font-size: 0.9375rem;
     color: var(--text);
-  }
-
-  footer {
-    width: 100%;
-    padding: 0 var(--edge) 1.5rem;
-    font-size: 0.875rem;
-    color: var(--text-soft);
-    text-align: center;
   }
 
   a:focus-visible,
@@ -315,11 +294,6 @@
 </div>
 
 <header class="top">
-  <nav class="links" aria-label="Author links">
-    <a href="https://juliozhang.com" rel="me">juliozhang.com</a>
-    <a href="https://orcid.org/0000-0003-4893-1261" rel="me">ORCID</a>
-    <a href="https://scholar.google.com/citations?user=PTNIOUkAAAAJ" rel="me">Google Scholar</a>
-  </nav>
   <a class="action" href="#email">Get the newsletter</a>
 </header>
 
@@ -335,8 +309,6 @@
     <p class="note" id="note" role="status" aria-live="polite"></p>
   </form>
 </main>
-
-<footer>Julio Min Fei Zhang, MD, MPH</footer>
 
 <script>
   // Buttondown sign-up endpoint for the julio_min newsletter.
